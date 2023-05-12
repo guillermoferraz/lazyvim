@@ -52,6 +52,7 @@ Keymap("n", "<f3>", "mmggg?G`m")
 
 -- <leader>x conflicts with LazyVim
 Keymap("n", "<leader>X", "<Plug>(bullets-toggle-checkbox)")
+Keymap("n", "<leader>q", "<cmd>:q<cr>")
 
 -- ------------------------------------------------------------------------- }}}
 -- {{{ Folding commands.
@@ -350,11 +351,11 @@ end
 if Is_Enabled("neo-tree.nvim") or Is_Enabled("nvim-tree") then
   -- nvim_tree takes precedence when both are true.
   if Is_Enabled("nvim-tree") then
-    Keymap("n", "<c-n>", "<cmd>NvimTreeToggle<cr>")
+    Keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
     Keymap("n", "<leader>nf", "<cmd>NvimTreeFindFile<cr>")
     Keymap("n", "<leader>nr", "<cmd>NvimTreeRefresh<cr>")
   else
-    Keymap("n", "<c-n>", "<cmd>Neotree toggle<cr>")
+    Keymap("n", "<leader>e", "<cmd>Neotree toggle<cr>")
     Keymap("n", "<leader>nf", "<cmd>Neotree focus<cr>")
     Keymap("n", "<leader>nr", "<cmd>Neotree show<cr>")
   end
