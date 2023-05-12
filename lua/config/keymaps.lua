@@ -434,7 +434,7 @@ if Is_Enabled("vim-tmux-runner") then
 end
 
 if Is_Enabled("toggleterm.nvim") then
-  Keymap("n", "<leader>Tf", [[<cmd>lua Customize.toggleterm.float()<cr>]])
+  Keymap("n", "<leader>t", [[<cmd>lua Customize.toggleterm.float()<cr>]])
   Keymap("n", "<leader>Tl", [[<cmd>lua Customize.toggleterm.lazygit()<cr>]])
   Keymap("n", "<leader>Tm", [[<cmd>lua Customize.toggleterm.neomutt()<cr>]])
   Keymap("n", "<leader>Tr", [[<cmd>lua Customize.toggleterm.ranger()<cr>]])

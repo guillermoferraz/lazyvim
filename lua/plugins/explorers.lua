@@ -18,13 +18,11 @@ return {
     enabled = Is_Enabled("neo-tree.nvim"),
     keys = false,
     opts = function(_, opts)
-        -- Use LazyVim default setup.
-      if Use_Defaults("neo-tree.nvim") then
-        opts = opts
-      else
-        opts.filesystem = { bind_to_cwd = false, follow_current_file = true, }
-        opts.window = { position = "right", }
-      end
+
+      opts.filesystem = { bind_to_cwd = false, follow_current_file = true, }
+      opts.window = { position = "right", }
+      opts.filesystem.filtered_items = { hide_dotfiles = false, }
+
     end,
   },
 
